@@ -3,44 +3,95 @@ title: "Resume"
 toc: true
 ---
 
-[📄 Download PDF](assets/Resume.pdf){.btn .btn-primary role="button"}
+[📄 Download Resume PDF](assets/Resume.pdf){.btn .btn-primary role="button"}
 
-::: {.callout-note appearance="simple"}
-Drop your typeset resume at `assets/resume.pdf` and it appears below. Any PDF
-works tonight — export from Word, Google Docs, or a `vitae`/LaTeX template. The
-web summary below is what recruiters skim; the PDF is what they download.
-:::
-
-<iframe src="assets/resume.pdf" width="100%" height="800px"
+<iframe
+  src="assets/Resume.pdf"
+  width="100%"
+  height="800px"
   style="border: 1px solid #ddd; margin-top: 1rem;">
 </iframe>
 
+## Professional Summary
+
+Data Engineer with more than five years of experience building scalable,
+production-ready data platforms across AWS and Azure. Experienced in developing
+batch and streaming pipelines, modernizing legacy ETL systems, optimizing Spark
+workloads, and supporting analytics and machine-learning applications.
+
 ## Education
 
-**M.S. Data Science** — Willamette University, Salem, OR *(2026)*
-**B.S. \[Your Major\]** — \[Your University\], \[City\] *(\[year\])*
+**Master of Science in Data Science**  
+Willamette University, Salem, Oregon  
+Expected August 2026 · GPA: 3.85/4.0
 
-## Skills
+Relevant coursework includes Data Engineering, Machine Learning, Big Data
+Analytics, Cloud Computing, Database Management Systems, Deep Learning,
+Data Visualization, and Distributed Computing.
 
-| Area | Tools |
-|------|-------|
-| **Languages** | R, Python, SQL |
-| **Data & ML** | \[tidyverse / pandas, scikit-learn, ...\] |
-| **Workflow** | Git, Quarto, \[Docker, cloud, ...\] |
-| **Communication** | Technical writing, data visualization |
+## Technical Skills
 
-## Experience
+| Area | Technologies |
+|------|--------------|
+| **Programming** | Python, SQL, Scala, Java, Bash |
+| **Cloud Platforms** | AWS, Microsoft Azure, Google Cloud Platform |
+| **Data Engineering** | Apache Spark, PySpark, Kafka, Airflow, dbt, Delta Lake, AWS Glue, Azure Data Factory |
+| **Data Warehousing** | Snowflake, Azure Synapse Analytics, Amazon Redshift, BigQuery |
+| **Databases** | PostgreSQL, Oracle, Teradata, Cosmos DB, DynamoDB |
+| **DevOps** | Git, GitHub, Jenkins, Terraform, Docker, Kubernetes, Azure DevOps |
+| **Analytics & BI** | Power BI, Tableau, data modeling, data quality, metadata management |
 
-**\[Job Title\]** — \[Organization\], \[Location\] *(\[dates\])*
+## Professional Experience
 
-- Accomplishment framed as impact, not a task description.
-- Another accomplishment with a number in it if you have one.
+### Data Engineer II — HCLTech, India
 
-## Projects
+*October 2023 – June 2025*
 
-**\[Capstone Title\]** — see the [Capstone page](capstone.qmd) for the full story.
+- Architected and maintained more than 60 batch and streaming pipelines,
+  processing approximately 150–300 million records per pipeline execution.
+- Built Lakehouse solutions using Azure Data Factory, Databricks, Delta Lake,
+  and ADLS Gen2.
+- Modernized Oracle and SQL Server ETL workloads using Azure Synapse and
+  Databricks PySpark, reducing execution time by more than 40%.
+- Optimized Spark workloads using partitioning, caching, broadcast joins,
+  Adaptive Query Execution, and file compaction, reducing processing time by
+  nearly 50%.
+- Developed reusable dbt models, automated data-quality checks, CI/CD
+  pipelines, and metadata-driven ingestion frameworks.
 
-- One line on the problem and your role.
+### Data Engineer — HCLTech, India
 
-*Placeholders in brackets are fine while you build. Replace them with real,
-defensible entries as they materialize — sparse and true beats full and shaky.*
+*January 2021 – September 2023*
+
+- Designed and maintained more than 35 production ETL and ELT pipelines using
+  Azure Data Factory and Azure Synapse Analytics.
+- Processed approximately 25–40 million records per pipeline execution for
+  enterprise analytics and regulatory reporting.
+- Developed serverless and event-driven pipelines using Azure Functions,
+  Azure Blob Storage, Cosmos DB, and PostgreSQL.
+- Built reusable ingestion frameworks that reduced onboarding time for new
+  data sources by more than 40%.
+
+### Data Engineer Intern — HCLTech, India
+
+*September 2019 – December 2020*
+
+- Assisted in building AWS data pipelines using Amazon S3, AWS Glue, PySpark,
+  Amazon Redshift, and Snowflake.
+- Developed Snowflake ingestion workflows using SnowSQL and Snowpipe.
+- Implemented streaming pipelines using Apache Kafka and Spark Structured
+  Streaming.
+- Performed data validation, debugging, and pipeline monitoring.
+
+## Featured Project
+
+### Forecasting and Explaining U.S. Unemployment Through Macroeconomic Indicators
+
+Developed a machine-learning pipeline using six publicly available economic
+datasets to forecast U.S. unemployment 3, 6, and 12 months ahead.
+
+The project included data ingestion, cleaning, monthly alignment, feature
+engineering, time-based model validation, and comparison of Linear Regression,
+Random Forest, and Gradient Boosting models.
+
+[View the full Capstone project](capstone.qmd)
