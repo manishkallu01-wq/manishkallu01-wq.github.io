@@ -2,16 +2,18 @@ project:
   type: website
   output-dir: _site
 
-# Freeze computational output so GitHub Actions does NOT need R or Python.
+# Freeze computational output so GitHub Actions does not need R or Python.
 # Run `quarto render` locally after changing any code chunk, then commit the
-# _freeze/ folder. See the README for details.
+# _freeze/ folder.
 execute:
   freeze: auto
 
 website:
-  title: "Blitz Bearcat"
+  title: "Manish Kallu"
   description: "M.S. Data Science portfolio — Willamette University"
-  site-url: https://your_github_username.github.io
+  site-url: "https://manishkallu01-wq.github.io"
+  repo-url: "https://github.com/manishkallu01-wq/manishkallu01-wq.github.io"
+
   navbar:
     right:
       - href: index.qmd
@@ -25,13 +27,14 @@ website:
       - href: about.qmd
         text: About
       - icon: github
-        href: https://github.com/your_github_username
+        href: "https://github.com/manishkallu01-wq"
         aria-label: GitHub
       - icon: linkedin
-        href: https://linkedin.com/in/your_github_username
+        href: "https://www.linkedin.com/in/manish-k-583b61421/"
         aria-label: LinkedIn
+
   page-footer:
-    left: "© 2026 Blitz Bearcat"
+    left: "© 2026 Manish Kallu"
 
 format:
   html:
