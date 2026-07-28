@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: images/ChatGPT Image Jun 28, 2026, 07_42_29 PM.png
+image: images/image.png
 about:
   template: solana
   image-shape: round
