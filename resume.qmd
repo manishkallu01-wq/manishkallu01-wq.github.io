@@ -3,7 +3,7 @@ title: "Resume"
 toc: true
 ---
 
-[📄 Download PDF](assets/resume.pdf){.btn .btn-primary role="button"}
+[📄 Download PDF](assets/Resume.pdf){.btn .btn-primary role="button"}
 
 ::: {.callout-note appearance="simple"}
 Drop your typeset resume at `assets/resume.pdf` and it appears below. Any PDF
