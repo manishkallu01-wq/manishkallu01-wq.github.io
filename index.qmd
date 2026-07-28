@@ -31,7 +31,7 @@ scalable, and production-ready data platforms across AWS and Azure.
 
 I am currently completing my M.S. in Data Science at
 **Willamette University**. My capstone project
-[forecasts future U.S. unemployment](capstone.qmd) using publicly available
+[forecasts future U.S. unemployment](projects/capstone/index.qmd) using publicly available
 macroeconomic indicators and machine learning.
 
 My interests include data engineering, cloud-native architectures, distributed
