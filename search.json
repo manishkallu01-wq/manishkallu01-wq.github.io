@@ -1,0 +1,149 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I’m a Data Engineer and Master’s student in Data Science at Willamette University with over five years of experience designing scalable data platforms and cloud-native data pipelines. My passion lies in turning raw data into reliable, high-quality datasets that power analytics, machine learning, and business decision-making.\nThroughout my career, I’ve worked across AWS and Azure ecosystems, building ETL pipelines, data warehouses, streaming applications, and modern Lakehouse architectures using technologies such as Apache Spark, Databricks, Snowflake, Airflow, and dbt. I enjoy solving complex engineering problems, optimizing large-scale data pipelines, and building systems that are reliable, maintainable, and production-ready. :contentReferenceoaicite:1\nAt Willamette University, my focus is on data engineering, machine learning, and cloud computing. My capstone explores forecasting U.S. unemployment using macroeconomic indicators through predictive modeling and feature engineering, combining data engineering with machine learning to generate actionable insights.\n\n\n\n🚀 Passionate about building scalable cloud data platforms and continuously learning emerging technologies.\n📚 Currently expanding my knowledge of distributed systems, MLOps, and advanced data engineering architectures while sharpening my problem-solving skills.\n🎯 My goal is to become a Senior Data Engineer or Data Platform Engineer, building modern data infrastructure that enables organizations to make data-driven decisions at scale.\n\n\n\n\nI’m always happy to connect about data engineering, cloud technologies, machine learning, open-source projects, or new career opportunities.\n\n✉️ manishhk2808@gmail.com\n💼 LinkedIn\n💻 GitHub"
+  },
+  {
+    "objectID": "about.html#hi-im-manish-kallu",
+    "href": "about.html#hi-im-manish-kallu",
+    "title": "About",
+    "section": "",
+    "text": "I’m a Data Engineer and Master’s student in Data Science at Willamette University with over five years of experience designing scalable data platforms and cloud-native data pipelines. My passion lies in turning raw data into reliable, high-quality datasets that power analytics, machine learning, and business decision-making.\nThroughout my career, I’ve worked across AWS and Azure ecosystems, building ETL pipelines, data warehouses, streaming applications, and modern Lakehouse architectures using technologies such as Apache Spark, Databricks, Snowflake, Airflow, and dbt. I enjoy solving complex engineering problems, optimizing large-scale data pipelines, and building systems that are reliable, maintainable, and production-ready. :contentReferenceoaicite:1\nAt Willamette University, my focus is on data engineering, machine learning, and cloud computing. My capstone explores forecasting U.S. unemployment using macroeconomic indicators through predictive modeling and feature engineering, combining data engineering with machine learning to generate actionable insights.\n\n\n\n🚀 Passionate about building scalable cloud data platforms and continuously learning emerging technologies.\n📚 Currently expanding my knowledge of distributed systems, MLOps, and advanced data engineering architectures while sharpening my problem-solving skills.\n🎯 My goal is to become a Senior Data Engineer or Data Platform Engineer, building modern data infrastructure that enables organizations to make data-driven decisions at scale.\n\n\n\n\nI’m always happy to connect about data engineering, cloud technologies, machine learning, open-source projects, or new career opportunities.\n\n✉️ manishhk2808@gmail.com\n💼 LinkedIn\n💻 GitHub"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blitz Bearcat",
+    "section": "",
+    "text": "I build data pipelines and turn messy data into decisions people can act on. Right now I am finishing my M.S. in Data Science at Willamette University, where my capstone predicts [your one-line problem] for [your stakeholder].\nI care about [topics you actually care about — e.g. housing, health equity, sports analytics], reproducible workflows, and explaining a model to the person who has to trust it.\nCurrently looking for [data analyst / data scientist / ML engineer] roles starting [month year]. Get in touch or grab my resume.\n\n\n\n🎓 Education\nM.S. Data Science Willamette University, 2026\n\n\n🛠️ Toolkit\nR · Python · SQL Quarto · Git · [add yours]\n\n\n📍 Based in\nSalem, OR Open to [remote / relocation]"
+  },
+  {
+    "objectID": "projects/example-analysis/index.html",
+    "href": "projects/example-analysis/index.html",
+    "title": "Example: [Project Name]",
+    "section": "",
+    "text": "This is a sample “other project” card. Copy this folder for each real project, edit the front matter (title, date, image, categories), and delete this example once you have your own."
+  },
+  {
+    "objectID": "projects/example-analysis/index.html#what-it-is",
+    "href": "projects/example-analysis/index.html#what-it-is",
+    "title": "Example: [Project Name]",
+    "section": "What it is",
+    "text": "What it is\nA short paragraph: the question, the data, and what you produced. Two to four sentences is plenty for a secondary project."
+  },
+  {
+    "objectID": "projects/example-analysis/index.html#what-i-did",
+    "href": "projects/example-analysis/index.html#what-i-did",
+    "title": "Example: [Project Name]",
+    "section": "What I did",
+    "text": "What I did\n\nSkill or step one (e.g. scraped and cleaned [source]).\nSkill or step two (e.g. built a [model / dashboard / viz]).\nThe result (e.g. [metric, insight, or artifact])."
+  },
+  {
+    "objectID": "projects/example-analysis/index.html#links",
+    "href": "projects/example-analysis/index.html#links",
+    "title": "Example: [Project Name]",
+    "section": "Links",
+    "text": "Links\n\n📦 Repo\n🔗 [Live demo / notebook / write-up, if any]"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "📄 Download PDF"
+  },
+  {
+    "objectID": "resume.html#education",
+    "href": "resume.html#education",
+    "title": "Resume",
+    "section": "Education",
+    "text": "Education\nM.S. Data Science — Willamette University, Salem, OR (2026) B.S. [Your Major] — [Your University], [City] ([year])"
+  },
+  {
+    "objectID": "resume.html#skills",
+    "href": "resume.html#skills",
+    "title": "Resume",
+    "section": "Skills",
+    "text": "Skills\n\n\n\nArea\nTools\n\n\n\n\nLanguages\nR, Python, SQL\n\n\nData & ML\n[tidyverse / pandas, scikit-learn, …]\n\n\nWorkflow\nGit, Quarto, [Docker, cloud, …]\n\n\nCommunication\nTechnical writing, data visualization"
+  },
+  {
+    "objectID": "resume.html#experience",
+    "href": "resume.html#experience",
+    "title": "Resume",
+    "section": "Experience",
+    "text": "Experience\n[Job Title] — [Organization], [Location] ([dates])\n\nAccomplishment framed as impact, not a task description.\nAnother accomplishment with a number in it if you have one."
+  },
+  {
+    "objectID": "resume.html#projects",
+    "href": "resume.html#projects",
+    "title": "Resume",
+    "section": "Projects",
+    "text": "Projects\n[Capstone Title] — see the Capstone page for the full story.\n\nOne line on the problem and your role.\n\nPlaceholders in brackets are fine while you build. Replace them with real, defensible entries as they materialize — sparse and true beats full and shaky."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Other Projects",
+    "section": "",
+    "text": "Your capstone lives on its own page. Everything else — course projects, analyses you did for fun, contributions — collects here automatically.\nEach project is a folder under projects/ with an index.qmd. Add a folder, re-render, and a new card shows up. Delete the example below once you have one real project of your own.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExample: [Project Name]\n\n\n\ncourse-work\n\npython\n\nvisualization\n\n\n\nOne line describing what this project does and the skill it shows.\n\n\n\nMay 1, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "capstone.html",
+    "href": "capstone.html",
+    "title": "Capstone: [Your Capstone Title]",
+    "section": "",
+    "text": "This is the anchor of your portfolio. A hiring manager who reads only one page should read this one. Replace every bracketed placeholder, then delete this note."
+  },
+  {
+    "objectID": "capstone.html#the-one-liner",
+    "href": "capstone.html#the-one-liner",
+    "title": "Capstone: [Your Capstone Title]",
+    "section": "The one-liner",
+    "text": "The one-liner\n\nWe integrated [data sources] into [dataset] so that [stakeholder] can [decision they can now make].\n\nRole: [e.g. I led the data pipeline and validation.] Team: [solo, or name + link teammates.] Repo: github.com/your_github_username/your-capstone-repo"
+  },
+  {
+    "objectID": "capstone.html#the-question",
+    "href": "capstone.html#the-question",
+    "title": "Capstone: [Your Capstone Title]",
+    "section": "The question",
+    "text": "The question\nWhat problem were you solving, and why does it matter to a real stakeholder? Two or three sentences. No jargon a hiring manager would have to look up."
+  },
+  {
+    "objectID": "capstone.html#the-data",
+    "href": "capstone.html#the-data",
+    "title": "Capstone: [Your Capstone Title]",
+    "section": "The data",
+    "text": "The data\nWhere the data came from, how much of it, and the one hard thing about it (missingness, joins across sources, scale, privacy). This is your data engineering story — the part the repo link backs up."
+  },
+  {
+    "objectID": "capstone.html#the-approach",
+    "href": "capstone.html#the-approach",
+    "title": "Capstone: [Your Capstone Title]",
+    "section": "The approach",
+    "text": "The approach\nYour method at portfolio depth: shorter than your M4 write-up, longer than a tweet. What did you try, what did you keep, and why."
+  },
+  {
+    "objectID": "capstone.html#findings",
+    "href": "capstone.html#findings",
+    "title": "Capstone: [Your Capstone Title]",
+    "section": "Findings",
+    "text": "Findings\nLead with your best figure or your architecture diagram.\n\n\n\nReplace with your key result or system diagram.\n\n\nState the finding in plain language, then the caveat. Sparse and true beats full and shaky."
+  },
+  {
+    "objectID": "capstone.html#the-full-write-up",
+    "href": "capstone.html#the-full-write-up",
+    "title": "Capstone: [Your Capstone Title]",
+    "section": "The full write-up",
+    "text": "The full write-up\nPick the option that matches where your write-up lives, keep one, delete the rest.\n\nA · Native QuartoB · Embedded PDFC · Published Google Doc\n\n\nIf your write-up is a .qmd, copy it into projects/capstone/index.qmd and link it, or fold its sections directly into this page. Set eval: false (or rely on freeze) on any chunk that needs data the public repo does not contain.\n\n\n[Download the write-up (PDF)](projects/capstone/writeup.pdf){.btn .btn-primary}\n\n&lt;iframe src=\"projects/capstone/writeup.pdf\" width=\"100%\" height=\"800px\"\n  style=\"border: 1px solid #ddd;\"&gt;&lt;/iframe&gt;\n\n\n[Read the full write-up](https://docs.google.com/document/d/e/XXXX/pub){.btn .btn-primary}\n\n&lt;iframe src=\"https://docs.google.com/document/d/e/XXXX/pub?embedded=true\"\n  width=\"100%\" height=\"800px\" style=\"border: 1px solid #ddd;\"&gt;&lt;/iframe&gt;"
+  },
+  {
+    "objectID": "capstone.html#dig-deeper",
+    "href": "capstone.html#dig-deeper",
+    "title": "Capstone: [Your Capstone Title]",
+    "section": "Dig deeper",
+    "text": "Dig deeper\n\n📦 Code & pipeline: your-capstone-repo\n📊 Slides / poster: [link if you have one]"
+  }
+]
