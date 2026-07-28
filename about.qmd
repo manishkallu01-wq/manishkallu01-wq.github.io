@@ -1,35 +1,30 @@
 ---
 title: "About"
-image: images/profile.png
+image: images/ChatGPT Image Jun 28, 2026, 07_42_29 PM.png
 about:
   template: solana
   image-shape: round
   image-width: 12em
 ---
 
-## Hi, I'm Blitz 👋
+## Hi, I'm Manish Kallu 👋
 
-The home page is the ten-second version. This is the longer story — write it in
-your own voice.
+I'm a Data Engineer and Master's student in Data Science at Willamette University with over five years of experience designing scalable data platforms and cloud-native data pipelines. My passion lies in turning raw data into reliable, high-quality datasets that power analytics, machine learning, and business decision-making.
 
-I came to data science from \[your path: a major, a job, a question that would
-not leave you alone\]. What keeps me here is \[the part of the work you genuinely
-enjoy — the modeling, the wrangling, the moment a chart makes something click\].
+Throughout my career, I've worked across AWS and Azure ecosystems, building ETL pipelines, data warehouses, streaming applications, and modern Lakehouse architectures using technologies such as Apache Spark, Databricks, Snowflake, Airflow, and dbt. I enjoy solving complex engineering problems, optimizing large-scale data pipelines, and building systems that are reliable, maintainable, and production-ready. :contentReference[oaicite:1]{index=1}
 
-At Willamette my focus has been \[your emphasis: forecasting, causal inference,
-NLP, data engineering, ...\]. My [capstone](capstone.qmd) is where that comes
-together.
+At Willamette University, my focus is on data engineering, machine learning, and cloud computing. My [capstone](capstone.qmd) explores forecasting U.S. unemployment using macroeconomic indicators through predictive modeling and feature engineering, combining data engineering with machine learning to generate actionable insights.
 
 ### Beyond the terminal
 
-- 🌲 \[Something human — a hobby, a place, a cause.\]
-- 📚 \[Currently reading / learning / building.\]
-- 🎯 \[What you want to be doing in two years.\]
+- 🚀 Passionate about building scalable cloud data platforms and continuously learning emerging technologies.
+- 📚 Currently expanding my knowledge of distributed systems, MLOps, and advanced data engineering architectures while sharpening my problem-solving skills.
+- 🎯 My goal is to become a Senior Data Engineer or Data Platform Engineer, building modern data infrastructure that enables organizations to make data-driven decisions at scale.
 
 ### Get in touch
 
-I'm happy to talk about \[data work, collaborations, roles\].
+I'm always happy to connect about data engineering, cloud technologies, machine learning, open-source projects, or new career opportunities.
 
-- ✉️ [you@willamette.edu](mailto:you@willamette.edu)
-- 💼 [LinkedIn](https://linkedin.com/in/your_github_username)
-- 💻 [GitHub](https://github.com/your_github_username)
+- ✉️ [manishhk2808@gmail.com](mailto:manishhk2808@gmail.com)
+- 💼 [LinkedIn](https://linkedin.com/in/manish-k-583b61421)
+- 💻 [GitHub](https://github.com/manishkallu01)
