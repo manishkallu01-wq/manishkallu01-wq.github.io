@@ -1,38 +1,45 @@
 ---
-title: "Blitz Bearcat"
-subtitle: "M.S. Data Science Candidate · Willamette University"
-image: images/profile.png
+title: "Manish Kallu"
+subtitle: "Data Engineer · M.S. Data Science Candidate"
+image: images/image.png
+
 about:
   template: trestles
   image-shape: round
   image-width: 16em
+
   links:
     - icon: github
       text: GitHub
-      href: https://github.com/your_github_username
+      href: https://github.com/manishkallu01-wq
+
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com/in/your_github_username
+      href: https://www.linkedin.com/in/manish-k-583b61421/
+
     - icon: envelope
       text: Email
-      href: mailto:you@willamette.edu
+      href: mailto:manishhk2808@gmail.com
+
     - icon: file-earmark-pdf
       text: Resume
       href: resume.qmd
 ---
 
-I build data pipelines and turn messy data into decisions people can act on.
-Right now I am finishing my M.S. in Data Science at **Willamette University**,
-where my capstone [predicts \[your one-line problem\]](capstone.qmd) for
-\[your stakeholder\].
+I am a Data Engineer with more than five years of experience building reliable,
+scalable, and production-ready data platforms across AWS and Azure.
 
-I care about \[topics you actually care about — e.g. housing, health equity,
-sports analytics\], reproducible workflows, and explaining a model to the person
-who has to trust it.
+I am currently completing my M.S. in Data Science at
+**Willamette University**. My capstone project
+[forecasts future U.S. unemployment](capstone.qmd) using publicly available
+macroeconomic indicators and machine learning.
 
-**Currently looking for** \[data analyst / data scientist / ML engineer\] roles
-starting \[month year\]. [Get in touch](about.qmd) or grab my
-[resume](resume.qmd).
+My interests include data engineering, cloud-native architectures, distributed
+data processing, machine learning, and transforming complex data into useful
+business insights.
+
+**Currently seeking Data Engineer opportunities.**
+[Get in touch](about.qmd) or view my [resume](resume.qmd).
 
 ---
 
@@ -40,20 +47,25 @@ starting \[month year\]. [Get in touch](about.qmd) or grab my
 
 ::: {.g-col-12 .g-col-md-4}
 ### 🎓 Education
-M.S. Data Science
+
+M.S. Data Science  
 Willamette University, 2026
 :::
 
 ::: {.g-col-12 .g-col-md-4}
 ### 🛠️ Toolkit
-R · Python · SQL
-Quarto · Git · \[add yours\]
+
+Python · SQL · PySpark  
+AWS · Azure · Databricks  
+Snowflake · Airflow · dbt  
+Spark · Kafka · Git
 :::
 
 ::: {.g-col-12 .g-col-md-4}
 ### 📍 Based in
-Salem, OR
-Open to \[remote / relocation\]
+
+Salem, Oregon  
+Open to relocation
 :::
 
 :::
