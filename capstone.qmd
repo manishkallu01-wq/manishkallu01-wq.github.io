@@ -15,7 +15,7 @@ toc: true
 **Owner / Product Lead:** Manish R. Kallu  
 **Repository:** [DATA510-Session-2](https://github.com/manishkallu01-wq/DATA510-Session-2)
 
-<a href="assets/Project-Report.pdf" class="btn btn-primary" download="Project Report.pdf">📄 Download Project Report</a>
+<a href="assets/Project%20Report.pdf" class="btn btn-primary" download="Project Report.pdf">📄 Download Project Report</a>
 
 ## Research questions
 
@@ -87,7 +87,7 @@ COVID-19 was the clearest failure case. Event-specific RMSE exceeded six percent
 
 Research Question 2 was evaluated separately using Pearson and Spearman lead–lag correlations between unemployment and five external indicators.
 
-| Indicator | 0M r | 3M r | 6M r | 12M r | Mean |r| | Strongest lead |
+| Indicator | 0M r | 3M r | 6M r | 12M r | Mean absolute r | Strongest lead |
 |---|---:|---:|---:|---:|---:|---|
 | **Consumer sentiment** | -0.351 | -0.399 | -0.446 | **-0.496** | **0.423** | 12M (-0.496) |
 | Recession indicator | 0.159 | 0.298 | 0.378 | 0.429 | 0.316 | 12M (0.429) |
@@ -123,7 +123,7 @@ For the historical-correlation question, consumer sentiment is the strongest ove
 
 ## Project materials
 
-- 📄 **Project Report:** <a href="assets/Project-Report.pdf" download="Project Report.pdf">Download the full 16-page report</a>
+- 📄 **Project Report:** <a href="assets/Project%20Report.pdf" download="Project Report.pdf">Download the full 16-page report</a>
 - 📦 **Code, model outputs, and reproducibility materials:** [DATA510-Session-2](https://github.com/manishkallu01-wq/DATA510-Session-2)
 - 📊 **Detailed project page:** [Forecasting and Explaining U.S. Unemployment](projects/capstone/index.qmd)
 - 📄 **Resume:** [View my resume](resume.qmd)
