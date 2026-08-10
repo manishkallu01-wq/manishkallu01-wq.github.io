@@ -70,25 +70,34 @@ a { text-underline-offset: .16em; }
 .hero-resume { background: linear-gradient(135deg, #e5f6ec 0%, #f7fcf9 48%, #e8f0ff 100%); border-left: 6px solid #3b7d67; }
 .hero-about { background: linear-gradient(135deg, #efe5ff 0%, #fbf7ff 48%, #e5f4ff 100%); border-left: 6px solid #6957a8; }
 
-/* Keep Quarto's default portrait frame/area. Zoom the photo content out inside that same frame. */
+/* Simple, normal circular portrait frame. Keep the frame full size and zoom only the photo content out to ~75%. */
 .about-image {
-  background: radial-gradient(circle at 50% 42%, #ffffff 0%, #edf4f7 72%, #dfe9ee 100%);
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 10px 32px rgba(22, 63, 84, .18);
+  aspect-ratio: 1 / 1 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: #eef4f7;
+  border: 4px solid #ffffff;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 24px rgba(22, 63, 84, .16);
 }
 .about-image img,
 img.round {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
   object-position: center center !important;
-  transform: none !important;
-  padding: 12.5%;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border: 4px solid rgba(255,255,255,.95);
-  box-shadow: 0 5px 24px rgba(15, 76, 92, .16);
+  transform: scale(.75) !important;
+  transform-origin: center center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  box-shadow: none !important;
 }
 
 .metric-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; margin: 1.3rem 0 1.6rem; }
@@ -133,5 +142,5 @@ code { color: #8a3e12; }
   .page-hero { padding: 1.05rem; }
   .metric-strip, .feature-grid, .visual-flow { grid-template-columns: 1fr; }
   table { font-size: .88rem; }
-  .about-image img, img.round { padding: 12.5%; transform: none !important; }
+  .about-image img, img.round { transform: scale(.75) !important; }
 }
