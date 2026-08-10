@@ -2,7 +2,6 @@
 title: "Forecasting and Explaining U.S. Unemployment Through Macroeconomic Indicators"
 subtitle: "A horizon-specific forecasting and historical-correlation study using public U.S. macroeconomic data"
 date: 2026-08-10
-image: projects/capstone/featured.svg
 categories: [capstone, data-engineering, machine-learning, python]
 toc: true
 ---
