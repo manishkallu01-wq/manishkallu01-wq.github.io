@@ -57,23 +57,49 @@ I am currently completing my M.S. in Data Science at **Willamette University**. 
 :::
 :::
 
-My interests include data engineering, cloud-native architectures, distributed
-data processing, machine learning, and transforming complex data into useful
-business insights.
+### How I turn data into outcomes
+
+::: {.visual-flow}
+::: {.flow-step}
+<span class="flow-icon">🗂️</span>
+**Ingest**
+
+<small>APIs · files · databases · streams</small>
+:::
+::: {.flow-step}
+<span class="flow-icon">⚙️</span>
+**Transform**
+
+<small>Python · SQL · PySpark · dbt</small>
+:::
+::: {.flow-step}
+<span class="flow-icon">☁️</span>
+**Scale**
+
+<small>AWS · Azure · Databricks · Snowflake</small>
+:::
+::: {.flow-step}
+<span class="flow-icon">📈</span>
+**Deliver**
+
+<small>Analytics · ML · trusted datasets</small>
+:::
+:::
+
+My interests include data engineering, cloud-native architectures, distributed data processing, machine learning, and transforming complex data into useful business insights.
 
 ---
 
-::: {.grid}
+::: {.feature-grid}
+::: {.feature-card}
+#### 🎓 Education
 
-::: {.g-col-12 .g-col-md-4}
-### 🎓 Education
-
-M.S. Data Science  
+**M.S. Data Science**  
 Willamette University, 2026
 :::
 
-::: {.g-col-12 .g-col-md-4}
-### 🛠️ Toolkit
+::: {.feature-card}
+#### 🛠️ Core toolkit
 
 Python · SQL · PySpark  
 AWS · Azure · Databricks  
@@ -81,11 +107,10 @@ Snowflake · Airflow · dbt
 Spark · Kafka · Git
 :::
 
-::: {.g-col-12 .g-col-md-4}
-### 📍 Based in
+::: {.feature-card}
+#### 📍 Location
 
 Salem, Oregon  
-Open to relocation
+**Open to relocation**
 :::
-
 :::
