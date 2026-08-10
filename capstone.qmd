@@ -1,84 +1,108 @@
 ---
-title: "Capstone: [Your Capstone Title]"
-subtitle: "A one-sentence hook: what you built and who it helps."
-date: 2026-07-27
+title: "Forecasting and Explaining U.S. Unemployment Through Macroeconomic Indicators"
+subtitle: "An early-warning machine-learning system for forecasting U.S. labor-market deterioration 3–12 months ahead"
+date: 2026-08-10
 image: projects/capstone/featured.svg
-categories: [capstone, machine-learning, R]
+categories: [capstone, data-engineering, machine-learning, python]
 toc: true
 ---
 
-::: {.callout-note appearance="simple"}
-This is the anchor of your portfolio. A hiring manager who reads only one page
-should read this one. Replace every bracketed placeholder, then delete this note.
-:::
-
 ## The one-liner
 
-> We integrated **\[data sources\]** into **\[dataset\]** so that
-> **\[stakeholder\]** can **\[decision they can now make\]**.
+> I integrated six publicly available U.S. macroeconomic datasets into a monthly modeling dataset so that policymakers, economists, businesses, investors, and workforce agencies can identify early-warning signals of labor-market deterioration before they fully appear in the unemployment rate.
 
-**Role:** \[e.g. I led the data pipeline and validation.\]
-**Team:** \[solo, or name + link teammates.\]
-**Repo:** [github.com/your_github_username/your-capstone-repo](https://github.com/your_github_username/your-capstone-repo)
+**Role:** Solo capstone — end-to-end data acquisition, cleaning, monthly alignment, feature engineering, modeling, time-based validation, interpretation, and documentation.  
+**Team:** Solo project by Manish Kallu.  
+**Repository:** [DATA510-Session-2](https://github.com/manishkallu01-wq/DATA510-Session-2)
 
 ## The question
 
-What problem were you solving, and why does it matter to a real stakeholder?
-Two or three sentences. No jargon a hiring manager would have to look up.
+The primary research question is:
+
+> **Which publicly available macroeconomic indicators provide the strongest early-warning signals of future U.S. labor-market deterioration?**
+
+A supporting question asks whether future unemployment conditions can be forecast **6–12 months in advance** using publicly available macroeconomic indicators. The project evaluates 3-, 6-, and 12-month forecast horizons, with the goal of building an interpretable early-warning system rather than claiming precise long-range prediction.
+
+## Why it matters
+
+Unemployment is an important economic indicator, but it often reflects deterioration after broader economic conditions have already begun to change. Earlier signals can support planning and resource-allocation decisions for policymakers, economists, businesses, investors, and workforce agencies.
+
+This capstone combines data engineering and machine learning to test whether movements in inflation, interest rates, economic growth, consumer sentiment, and recession conditions can provide useful advance warning of future unemployment.
 
 ## The data
 
-Where the data came from, how much of it, and the one hard thing about it
-(missingness, joins across sources, scale, privacy). This is your data
-engineering story — the part the repo link backs up.
+The project combines six public economic series covering **January 1956 through December 2025**:
 
-## The approach
+| Series | Source | Role in the project |
+|---|---|---|
+| **UNRATE** — Unemployment Rate | U.S. Bureau of Labor Statistics / FRED | Forecast target |
+| **CPIAUCSL** — Consumer Price Index | U.S. Bureau of Labor Statistics / FRED | Inflation signal |
+| **FEDFUNDS** — Federal Funds Rate | Federal Reserve / FRED | Monetary-policy signal |
+| **GDP** — Real Gross Domestic Product | U.S. Bureau of Economic Analysis / FRED | Economic-growth signal |
+| **UMCSENT** — Consumer Sentiment | University of Michigan / FRED | Consumer-confidence signal |
+| **USREC** — Recession Indicator | NBER / FRED | Business-cycle signal |
 
-Your method at portfolio depth: shorter than your M4 write-up, longer than a
-tweet. What did you try, what did you keep, and why.
+The final monthly dataset contains **838 observations**. Quarterly GDP was converted to monthly frequency, all sources were standardized and merged on date, and interpolation was limited to valid mid-series gaps rather than backfilling periods before a series was available.
+
+## Data engineering and feature pipeline
+
+The workflow was designed as a reproducible monthly pipeline:
+
+1. Ingest the six public macroeconomic series.
+2. Standardize dates, numeric fields, and series names.
+3. Convert quarterly GDP observations to monthly frequency.
+4. Merge all sources on a common monthly date index.
+5. Create future unemployment targets for 3, 6, and 12 months.
+6. Engineer lag, momentum, inflation, growth, monetary-policy, stress, and recession-risk features.
+7. Remove rows without valid future target labels and build horizon-specific modeling datasets.
+8. Use time-ordered train/test evaluation so future observations never leak into model training.
+
+Engineered features include lagged federal-funds, GDP-growth and consumer-sentiment measures; unemployment and GDP momentum; inflation acceleration; growth-to-inflation and inflation-to-unemployment ratios; a monetary-tightening index; an economic-stress index; consumer-confidence deterioration; recession-risk flags; and labor-market shock indicators.
+
+During validation, future unemployment targets were rebuilt directly from the unemployment-rate series and rows with unavailable future labels were excluded. This corrected target leakage and ensured that reported results represent genuine out-of-sample forecasting.
+
+## Modeling approach
+
+The project compares three interpretable and tree-based approaches:
+
+- **Linear Regression** as a transparent benchmark
+- **Random Forest** for nonlinear relationships and interactions
+- **Gradient Boosting** for sequentially improving prediction error
+
+Models were evaluated separately at **3-, 6-, and 12-month horizons** using a time-based split. Performance was measured with **MAE, RMSE, and R²**, and results were compared against an unemployment-only baseline.
 
 ## Findings
 
-Lead with your best figure or your architecture diagram.
+The strongest result is the **3-month forecast**, where **Gradient Boosting using the macroeconomic indicator feature set** achieved:
 
-![Replace with your key result or system diagram.](projects/capstone/featured.svg){fig-alt="Placeholder capstone figure" width="90%"}
+| Forecast horizon | Best model | MAE | RMSE | R² | Interpretation |
+|---|---|---:|---:|---:|---|
+| **3 months** | Gradient Boosting | **0.4445** | **1.2643** | **0.5232** | Strongest and most useful early-warning horizon |
+| **6 months** | Gradient Boosting | **0.9063** | **1.5824** | **0.2531** | Some predictive value, but materially weaker |
+| **12 months** | Random Forest | **2.1061** | **2.4716** | **-0.8644** | Not reliable for precise long-range forecasting |
 
-State the finding in plain language, then the caveat. Sparse and true beats
-full and shaky.
+For the 3-month model, the latest valid feature month is **September 2025**, allowing prediction through **December 2025**.
 
-## The full write-up
+The overall pattern is clear: macroeconomic indicators provide the most useful signal in the **near term**. Predictive performance weakens substantially as the forecast horizon increases, especially at 12 months.
 
-Pick the option that matches where your write-up lives, keep one, delete the rest.
+Important signals across the analysis include **consumer sentiment, inflation, interest rates, recession periods, and GDP growth patterns**. These variables are economically interpretable and help explain why the model behaves as an early-warning tool rather than a black-box forecast.
 
-::: {.panel-tabset}
+![Capstone project visual.](projects/capstone/featured.svg){fig-alt="Forecasting U.S. unemployment using macroeconomic indicators" width="90%"}
 
-### A · Native Quarto
+## What I learned
 
-If your write-up is a `.qmd`, copy it into `projects/capstone/index.qmd` and
-link it, or fold its sections directly into this page. Set `eval: false` (or
-rely on `freeze`) on any chunk that needs data the public repo does not contain.
+The project reinforced that strong forecasting performance depends as much on data engineering and validation discipline as on model choice. Correct date alignment, horizon-specific target construction, leakage prevention, missing-value handling, and time-aware evaluation materially affected the credibility of the final results.
 
-### B · Embedded PDF
+It also showed that a model can still be useful even when it is not a good long-range forecaster. The 3-month horizon provides a practical early-warning signal, while the weak 12-month result is an important limitation rather than something to hide.
 
-```markdown
-[Download the write-up (PDF)](projects/capstone/writeup.pdf){.btn .btn-primary}
+## Limitations and future work
 
-<iframe src="projects/capstone/writeup.pdf" width="100%" height="800px"
-  style="border: 1px solid #ddd;"></iframe>
-```
+The current analysis uses six national U.S. indicators and data through 2025. It does not incorporate state-level labor-market variation, industry-specific employment conditions, demographic differences, or alternative high-frequency indicators.
 
-### C · Published Google Doc
-
-```markdown
-[Read the full write-up](https://docs.google.com/document/d/e/XXXX/pub){.btn .btn-primary}
-
-<iframe src="https://docs.google.com/document/d/e/XXXX/pub?embedded=true"
-  width="100%" height="800px" style="border: 1px solid #ddd;"></iframe>
-```
-
-:::
+Future work could add state and industry labor data, evaluate additional leading indicators, test alternative forecast horizons, and compare advanced time-series or deep-learning approaches while preserving strict time-based validation.
 
 ## Dig deeper
 
-- 📦 **Code & pipeline:** [your-capstone-repo](https://github.com/your_github_username/your-capstone-repo)
-- 📊 **Slides / poster:** \[link if you have one\]
+- 📦 **Code, data pipeline, and modeling:** [DATA510-Session-2 on GitHub](https://github.com/manishkallu01-wq/DATA510-Session-2)
+- 📊 **Detailed project page:** [Forecasting and Explaining U.S. Unemployment](projects/capstone/index.qmd)
+- 📄 **Resume:** [View my resume](resume.qmd)
