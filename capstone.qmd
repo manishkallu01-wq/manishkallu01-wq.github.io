@@ -15,6 +15,7 @@ toc: true
 **Repository:** [DATA510-Session-2](https://github.com/manishkallu01-wq/DATA510-Session-2)
 
 <a href="assets/Project%20Report.pdf" class="btn btn-primary" download="Project Report.pdf">📄 Download Project Report</a>
+[🖼️ View Capstone Poster](https://github.com/manishkallu01-wq/DATA510-Session-2/blob/0557c27a3f0a96f0e0ad24467b45de5ce9a0d546/deliverables/M5-final/M5%20Poster.pdf){.btn .btn-outline-primary role="button"}
 
 ## Research questions
 
@@ -123,6 +124,7 @@ For the historical-correlation question, consumer sentiment is the strongest ove
 ## Project materials
 
 - 📄 **Project Report:** <a href="assets/Project%20Report.pdf" download="Project Report.pdf">Download the full 16-page report</a>
+- 🖼️ **Final Capstone Poster:** [View poster PDF](https://github.com/manishkallu01-wq/DATA510-Session-2/blob/0557c27a3f0a96f0e0ad24467b45de5ce9a0d546/deliverables/M5-final/M5%20Poster.pdf)
 - 📦 **Code, model outputs, and reproducibility materials:** [DATA510-Session-2](https://github.com/manishkallu01-wq/DATA510-Session-2)
 - 📊 **Detailed project page:** [Forecasting and Explaining U.S. Unemployment](projects/capstone/index.qmd)
 - 📄 **Resume:** [View my resume](resume.qmd)
