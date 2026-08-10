@@ -1,6 +1,6 @@
 ---
 title: "Forecasting and Explaining U.S. Unemployment"
-subtitle: "A horizon-specific forecasting and historical-correlation study using public macroeconomic data"
+subtitle: "A horizon-specific forecasting and historical-correlation study using public U.S. macroeconomic data"
 toc: true
 ---
 
@@ -8,7 +8,7 @@ toc: true
 
 This capstone evaluates whether publicly available macroeconomic indicators can forecast the U.S. unemployment rate **three, six, and twelve months ahead** and which original macroeconomic indicators show the strongest historical relationship with unemployment. The submitted analysis uses monthly data from **April 1956 through December 2025**, **35 engineered predictors**, six forecasting algorithms, chronological validation, and separate lead–lag correlation analysis.
 
-[📄 Download Project Report](../../assets/Project-Report.pdf){.btn .btn-primary role="button"}
+<a href="../../assets/Project%20Report.pdf" class="btn btn-primary" download="Project Report.pdf">📄 Download Project Report</a>
 [View the GitHub Repository](https://github.com/manishkallu01-wq/DATA510-Session-2){.btn .btn-outline-primary role="button"}
 
 ## Research Questions
