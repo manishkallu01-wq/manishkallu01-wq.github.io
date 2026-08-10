@@ -70,20 +70,6 @@ a { text-underline-offset: .16em; }
 .hero-resume { background: linear-gradient(135deg, #e5f6ec 0%, #f7fcf9 48%, #e8f0ff 100%); border-left: 6px solid #3b7d67; }
 .hero-about { background: linear-gradient(135deg, #efe5ff 0%, #fbf7ff 48%, #e5f4ff 100%); border-left: 6px solid #6957a8; }
 
-/* Restore Quarto's original portrait sizing and circular shape. */
-.about-image img,
-img.round {
-  transform: none !important;
-  width: auto;
-  height: auto;
-  object-fit: initial;
-  object-position: initial;
-  margin: initial;
-  padding: initial;
-  border: 4px solid rgba(255,255,255,.95);
-  box-shadow: 0 5px 24px rgba(15, 76, 92, .16);
-}
-
 .metric-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; margin: 1.3rem 0 1.6rem; }
 .metric-card { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--border); border-radius: .9rem; padding: .95rem 1.05rem; box-shadow: 0 6px 20px rgba(30, 64, 82, .07); }
 .metric-card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--teal), var(--gold)); }
