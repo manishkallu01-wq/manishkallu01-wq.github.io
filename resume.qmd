@@ -91,4 +91,4 @@ Built a reproducible forecasting and historical-correlation workflow using six p
 
 The selected **3-month Ridge Regression** model achieved **MAE 0.349, RMSE 1.020, and R² 0.720**. The selected **6-month Extra Trees** model achieved **R² 0.563**, while the 12-month model showed limited incremental value (**R² 0.205**). Consumer sentiment had the strongest overall external historical relationship with future unemployment.
 
-[View the full Capstone project](capstone.qmd) · [Download Project Report](assets/Project-Report.pdf)
+[View the full Capstone project](capstone.qmd) · <a href="assets/Project%20Report.pdf" download="Project Report.pdf">Download Project Report</a>
