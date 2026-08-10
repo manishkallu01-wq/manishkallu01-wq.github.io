@@ -1,25 +1,225 @@
 /*-- scss:defaults --*/
 
-// One accent color and one font carry most of your site's personality.
-// Willamette cardinal + Bearcat gold as sensible defaults — change them to yours.
-$primary:   #820023;   // Willamette cardinal
-$link-color: #820023;
+// Professional portfolio palette: deep navy, teal, warm gold and clean neutrals.
+$primary: #0f4c5c;
+$link-color: #0f6b78;
 $font-family-sans-serif: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$body-color: #1f2937;
+$body-bg: #fbfcfe;
 
 /*-- scss:rules --*/
 
+:root {
+  --portfolio-navy: #15324a;
+  --portfolio-teal: #0f6b78;
+  --portfolio-teal-soft: #eaf6f7;
+  --portfolio-gold: #c58b2b;
+  --portfolio-gold-soft: #fff7e7;
+  --portfolio-blue-soft: #edf4fb;
+  --portfolio-slate: #526171;
+  --portfolio-border: #dce5ea;
+  --portfolio-surface: #ffffff;
+}
+
+body {
+  line-height: 1.65;
+}
+
 h1, h2, h3 {
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  color: var(--portfolio-navy);
+}
+
+h1 {
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  border-bottom: 1px solid var(--portfolio-border);
+  padding-bottom: .35rem;
+  margin-top: 2.15rem;
+}
+
+a {
+  text-underline-offset: 0.16em;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #102f46 0%, #0f5965 100%) !important;
+  box-shadow: 0 2px 14px rgba(15, 50, 68, 0.18);
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .navbar-nav .nav-link.active {
+  color: #fff !important;
+}
+
+.navbar .nav-link:hover {
+  color: #ffe2a6 !important;
+}
+
+.page-footer {
+  border-top: 1px solid var(--portfolio-border);
+  background: #f4f8fa;
+  color: var(--portfolio-slate);
+}
+
+// Reusable visual banners used to give each portfolio page a distinct identity.
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  padding: 1.25rem 1.4rem;
+  margin: 0.35rem 0 1.6rem 0;
+  border: 1px solid var(--portfolio-border);
+  box-shadow: 0 8px 24px rgba(30, 64, 82, 0.08);
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  right: -3rem;
+  top: -4rem;
+  background: rgba(255,255,255,.28);
+}
+
+.page-hero p:last-child {
+  margin-bottom: 0;
+}
+
+.hero-home {
+  background: linear-gradient(135deg, #e8f6f7 0%, #f7fbfd 58%, #fff6e4 100%);
+  border-left: 5px solid var(--portfolio-teal);
+}
+
+.hero-capstone {
+  background: linear-gradient(135deg, #edf4fb 0%, #f8fbfd 55%, #eaf6f7 100%);
+  border-left: 5px solid #315f86;
+}
+
+.hero-projects {
+  background: linear-gradient(135deg, #fff6e3 0%, #fffdf8 55%, #eef7f7 100%);
+  border-left: 5px solid var(--portfolio-gold);
+}
+
+.hero-resume {
+  background: linear-gradient(135deg, #eef7f1 0%, #fbfdfb 55%, #eef5fb 100%);
+  border-left: 5px solid #3f7d5b;
+}
+
+.hero-about {
+  background: linear-gradient(135deg, #f5effb 0%, #fcfbfe 55%, #edf6fb 100%);
+  border-left: 5px solid #72539a;
+}
+
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .8rem;
+  margin: 1.25rem 0 1.55rem 0;
+}
+
+.metric-card {
+  background: var(--portfolio-surface);
+  border: 1px solid var(--portfolio-border);
+  border-radius: .8rem;
+  padding: .85rem 1rem;
+  box-shadow: 0 5px 16px rgba(30, 64, 82, 0.06);
+}
+
+.metric-card strong {
+  display: block;
+  font-size: 1.28rem;
+  color: var(--portfolio-navy);
+}
+
+.metric-card span {
+  color: var(--portfolio-slate);
+  font-size: .92rem;
+}
+
+.btn {
+  border-radius: .65rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  box-shadow: 0 3px 10px rgba(20, 66, 82, 0.08);
+}
+
+.btn-primary {
+  background-color: var(--portfolio-teal);
+  border-color: var(--portfolio-teal);
+}
+
+.btn-primary:hover {
+  background-color: #0b5965;
+  border-color: #0b5965;
+}
+
+.btn-outline-primary {
+  color: var(--portfolio-teal);
+  border-color: #5a8e96;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--portfolio-teal);
+  border-color: var(--portfolio-teal);
+}
+
+blockquote {
+  border-left: 4px solid var(--portfolio-gold);
+  background: var(--portfolio-gold-soft);
+  padding: .9rem 1.1rem;
+  border-radius: 0 .55rem .55rem 0;
+  color: #3a4650;
+}
+
+table {
+  background: #fff;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+thead {
+  background: #edf5f7;
+}
+
+figure img,
+.quarto-figure img {
+  border-radius: .75rem;
+  box-shadow: 0 6px 22px rgba(31, 65, 82, 0.12);
 }
 
 // Give the round about-page headshot a soft ring.
 .about-image img,
 img.round {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 24px rgba(15, 76, 92, 0.18);
+  border: 4px solid rgba(255,255,255,.9);
 }
 
-// A little breathing room on the project listing cards.
 .quarto-grid-item {
-  border-radius: 0.5rem;
+  border-radius: .8rem;
+  border: 1px solid var(--portfolio-border);
+  box-shadow: 0 5px 18px rgba(30, 64, 82, 0.07);
+}
+
+code {
+  color: #8a3e12;
+}
+
+@media (max-width: 767px) {
+  .page-hero {
+    padding: 1rem;
+  }
+
+  .metric-strip {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    font-size: .88rem;
+  }
 }
