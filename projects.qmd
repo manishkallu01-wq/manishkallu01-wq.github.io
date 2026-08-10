@@ -6,12 +6,10 @@ title: "Projects"
 
 ### [Forecasting and Explaining U.S. Unemployment](capstone.qmd)
 
-A machine-learning project that combines six publicly available macroeconomic
-datasets to forecast U.S. unemployment 3, 6, and 12 months ahead.
+A reproducible machine-learning and historical-correlation study using six public U.S. macroeconomic series from **April 1956 through December 2025**. Six forecasting algorithms were evaluated at 3-, 6-, and 12-month horizons using chronological validation and simple baselines.
 
-The project includes data ingestion, cleaning, feature engineering, time-based
-validation, model comparison, and interpretation of the strongest early-warning
-indicators.
+The selected **3-month Ridge Regression** model achieved **MAE 0.349, RMSE 1.020, and R² 0.720**. The selected **6-month Extra Trees** model retained moderate predictive value (**R² 0.563**), while the 12-month result had limited incremental value (**R² 0.205**). A separate lead–lag analysis identified **consumer sentiment** as the strongest overall external historical relationship with future unemployment, while also showing that relationships can change across economic regimes.
 
 [View Project](capstone.qmd){.btn .btn-primary role="button"}
+[Download Project Report](assets/Project-Report.pdf){.btn .btn-outline-primary role="button"}
 [GitHub Repository](https://github.com/manishkallu01-wq/DATA510-Session-2){.btn .btn-outline-primary role="button"}
