@@ -131,7 +131,7 @@ a { text-underline-offset: .16em; }
   border-left: 6px solid #6957a8;
 }
 
-/* 15% visual zoom-out for the portrait on Home and About. */
+/* Portrait zoomed out by an additional 15 percentage points on Home and About. */
 .about-image {
   background: radial-gradient(circle at 50% 42%, #ffffff 0%, #edf4f7 72%, #dfe9ee 100%);
   border-radius: 50%;
@@ -140,7 +140,7 @@ a { text-underline-offset: .16em; }
 }
 .about-image img,
 img.round {
-  transform: scale(.85);
+  transform: scale(.70);
   transform-origin: center center;
   border: 4px solid rgba(255,255,255,.95);
   box-shadow: 0 5px 24px rgba(15, 76, 92, .16);
@@ -290,5 +290,5 @@ code { color: #8a3e12; }
   .visual-flow { grid-template-columns: 1fr; }
   table { font-size: .88rem; }
   .about-image img,
-  img.round { transform: scale(.88); }
+  img.round { transform: scale(.70); }
 }
