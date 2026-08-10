@@ -15,7 +15,7 @@ toc: true
 **Role:** Solo capstone — data acquisition, cleaning, monthly alignment, feature engineering, modeling, chronological validation, historical correlation analysis, interpretation, and documentation.
 
 [📄 Download Project Report](assets/Project%20Report.pdf){.btn .btn-primary download="Project Report.pdf"}
-[🎨 View Final Poster](https://github.com/manishkallu01-wq/DATA510-Session-2/blob/main/deliverables/M5-final/M5%20Poster_Final.pdf){.btn .btn-outline-primary}
+[🎨 View Final Poster](assets/M5%20poster%20Final.pdf){.btn .btn-outline-primary}
 [💻 GitHub Repository](https://github.com/manishkallu01-wq/DATA510-Session-2){.btn .btn-outline-primary}
 
 ![Three-month Ridge Regression unemployment forecast across the chronological test period.](https://raw.githubusercontent.com/manishkallu01-wq/DATA510-Session-2/main/deliverables/M5-final/Plots/ML%20Models/3M%20Ridge%20Regression%20.png){fig-alt="Three-month Ridge Regression unemployment forecast comparing actual and predicted unemployment" width="100%"}
@@ -134,7 +134,7 @@ Public macroeconomic data support **useful 3-month forecasting and moderately in
 ## Project materials
 
 - 📄 **Final write-up:** [Download Project Report](assets/Project%20Report.pdf)
-- 🎨 **Final poster:** [View M5 Poster PDF](https://github.com/manishkallu01-wq/DATA510-Session-2/blob/main/deliverables/M5-final/M5%20Poster_Final.pdf)
+- 🎨 **Final poster:** [View M5 Poster PDF](assets/M5%20poster%20Final.pdf)
 - 💻 **Code, data, outputs, and reproducibility materials:** [DATA510-Session-2](https://github.com/manishkallu01-wq/DATA510-Session-2)
 - 📊 **Detailed project page:** [Forecasting and Explaining U.S. Unemployment](projects/capstone/index.qmd)
 - 📄 **Resume:** [View my resume](resume.qmd)
