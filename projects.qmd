@@ -11,5 +11,5 @@ A reproducible machine-learning and historical-correlation study using six publi
 The selected **3-month Ridge Regression** model achieved **MAE 0.349, RMSE 1.020, and R² 0.720**. The selected **6-month Extra Trees** model retained moderate predictive value (**R² 0.563**), while the 12-month result had limited incremental value (**R² 0.205**). A separate lead–lag analysis identified **consumer sentiment** as the strongest overall external historical relationship with future unemployment, while also showing that relationships can change across economic regimes.
 
 [View Project](capstone.qmd){.btn .btn-primary role="button"}
-[Download Project Report](assets/Project-Report.pdf){.btn .btn-outline-primary role="button"}
+<a href="assets/Project%20Report.pdf" class="btn btn-outline-primary" download="Project Report.pdf">Download Project Report</a>
 [GitHub Repository](https://github.com/manishkallu01-wq/DATA510-Session-2){.btn .btn-outline-primary role="button"}
