@@ -26,19 +26,40 @@ about:
       href: resume.qmd
 ---
 
+::: {.page-hero .hero-home}
+### Building reliable data systems that turn complex data into decisions
+
 I am a Data Engineer with more than five years of experience building reliable,
 scalable, and production-ready data platforms across AWS and Azure.
 
-I am currently completing my M.S. in Data Science at
-**Willamette University**. My capstone project
-[forecasts future U.S. unemployment](capstone.qmd) at three-, six-, and twelve-month horizons using public macroeconomic data, chronological model evaluation, and historical lead–lag analysis.
+I am currently completing my M.S. in Data Science at **Willamette University**. My capstone project [forecasts future U.S. unemployment](capstone.qmd) at three-, six-, and twelve-month horizons using public macroeconomic data, chronological model evaluation, and historical lead–lag analysis.
+
+**Currently seeking Data Engineer opportunities.** [Get in touch](about.qmd) or view my [resume](resume.qmd).
+:::
+
+::: {.metric-strip}
+::: {.metric-card}
+**5+ years**
+
+<span>Data engineering experience</span>
+:::
+
+::: {.metric-card}
+**150–300M**
+
+<span>Records per large pipeline execution</span>
+:::
+
+::: {.metric-card}
+**AWS + Azure**
+
+<span>Cloud data-platform experience</span>
+:::
+:::
 
 My interests include data engineering, cloud-native architectures, distributed
 data processing, machine learning, and transforming complex data into useful
 business insights.
-
-**Currently seeking Data Engineer opportunities.**
-[Get in touch](about.qmd) or view my [resume](resume.qmd).
 
 ---
 
