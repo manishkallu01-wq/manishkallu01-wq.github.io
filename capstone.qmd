@@ -1,108 +1,129 @@
 ---
 title: "Forecasting and Explaining U.S. Unemployment Through Macroeconomic Indicators"
-subtitle: "An early-warning machine-learning system for forecasting U.S. labor-market deterioration 3–12 months ahead"
+subtitle: "A horizon-specific forecasting and historical-correlation study using public U.S. macroeconomic data"
 date: 2026-08-10
 image: projects/capstone/featured.svg
 categories: [capstone, data-engineering, machine-learning, python]
 toc: true
 ---
 
-## The one-liner
+## Project overview
 
-> I integrated six publicly available U.S. macroeconomic datasets into a monthly modeling dataset so that policymakers, economists, businesses, investors, and workforce agencies can identify early-warning signals of labor-market deterioration before they fully appear in the unemployment rate.
+> I built a reproducible forecasting workflow around six public U.S. macroeconomic series to test how accurately unemployment can be forecast three, six, and twelve months ahead and which external indicators show the strongest historical relationship with current and future unemployment.
 
-**Role:** Solo capstone — end-to-end data acquisition, cleaning, monthly alignment, feature engineering, modeling, time-based validation, interpretation, and documentation.  
-**Team:** Solo project by Manish Kallu.  
+**Role:** Solo capstone — data acquisition, cleaning, monthly alignment, feature engineering, modeling, chronological validation, historical correlation analysis, interpretation, and documentation.  
+**Owner / Product Lead:** Manish R. Kallu  
 **Repository:** [DATA510-Session-2](https://github.com/manishkallu01-wq/DATA510-Session-2)
 
-## The question
+<a href="assets/Project-Report.pdf" class="btn btn-primary" download="Project Report.pdf">📄 Download Project Report</a>
 
-The primary research question is:
+## Research questions
 
-> **Which publicly available macroeconomic indicators provide the strongest early-warning signals of future U.S. labor-market deterioration?**
+1. **Can future U.S. unemployment be forecast three, six, and twelve months ahead using publicly available macroeconomic indicators?**
+2. **Which macroeconomic indicators show the strongest and most consistent historical relationship with unemployment across economic environments and business cycles?**
 
-A supporting question asks whether future unemployment conditions can be forecast **6–12 months in advance** using publicly available macroeconomic indicators. The project evaluates 3-, 6-, and 12-month forecast horizons, with the goal of building an interpretable early-warning system rather than claiming precise long-range prediction.
+The project keeps these questions separate: forecasting uses the full engineered predictor set, while the second question uses lead–lag correlations among five external indicators and unemployment.
 
 ## Why it matters
 
-Unemployment is an important economic indicator, but it often reflects deterioration after broader economic conditions have already begun to change. Earlier signals can support planning and resource-allocation decisions for policymakers, economists, businesses, investors, and workforce agencies.
+The unemployment rate is highly visible but lagging and shock-sensitive. A credible short-horizon forecast can support scenario planning before deterioration is fully reflected in official labor statistics. Potential users include policymakers, workforce agencies, universities, businesses and finance teams, economists, researchers, workers, and the public.
 
-This capstone combines data engineering and machine learning to test whether movements in inflation, interest rates, economic growth, consumer sentiment, and recession conditions can provide useful advance warning of future unemployment.
+The forecasts are intended for **research, scenario planning, and comparative model evaluation**. They are not appropriate as the sole basis for benefit allocation, hiring or layoff decisions, recession declarations, or claims about any individual worker.
 
-## The data
+## Data and engineering
 
-The project combines six public economic series covering **January 1956 through December 2025**:
+The submitted analysis uses U.S. monthly data from **April 1956 through December 2025**. The final analysis-ready dataset contains **837 rows, 40 columns, and 35 numeric predictors**. There are no duplicate dates or infinite numeric values after cleaning; missing target values occur only at the end of the series where future unemployment is not yet observable.
 
-| Series | Source | Role in the project |
-|---|---|---|
-| **UNRATE** — Unemployment Rate | U.S. Bureau of Labor Statistics / FRED | Forecast target |
-| **CPIAUCSL** — Consumer Price Index | U.S. Bureau of Labor Statistics / FRED | Inflation signal |
-| **FEDFUNDS** — Federal Funds Rate | Federal Reserve / FRED | Monetary-policy signal |
-| **GDP** — Real Gross Domestic Product | U.S. Bureau of Economic Analysis / FRED | Economic-growth signal |
-| **UMCSENT** — Consumer Sentiment | University of Michigan / FRED | Consumer-confidence signal |
-| **USREC** — Recession Indicator | NBER / FRED | Business-cycle signal |
+| Series | Concept | Source organization | Native frequency | Role |
+|---|---|---|---|---|
+| **UNRATE** | Unemployment rate | U.S. Bureau of Labor Statistics | Monthly | Target, persistence benchmark, labor lags |
+| **CPIAUCSL** | Consumer price index | U.S. Bureau of Labor Statistics | Monthly | Inflation and price-pressure features |
+| **FEDFUNDS** | Effective federal funds rate | Federal Reserve Board | Monthly | Monetary-policy and real-rate features |
+| **GDP** | Gross domestic product, current dollars | U.S. Bureau of Economic Analysis | Quarterly | Growth, lag, and momentum features |
+| **UMCSENT** | Consumer sentiment | University of Michigan | Monthly | Expectations and confidence deterioration |
+| **USREC** | NBER recession indicator | National Bureau of Economic Research | Monthly | Historical regime indicator and segmentation |
 
-The final monthly dataset contains **838 observations**. Quarterly GDP was converted to monthly frequency, all sources were standardized and merged on date, and interpolation was limited to valid mid-series gaps rather than backfilling periods before a series was available.
+### Pipeline and quality controls
 
-## Data engineering and feature pipeline
+1. Download and standardize the six source series with a consistent date column and numeric data types.
+2. Align quarterly GDP to monthly frequency by carrying each quarterly value across the three months of its quarter.
+3. Merge all six indicators using the monthly date key.
+4. Create lagged, rate-of-change, momentum, ratio, stress, and future-unemployment target variables.
+5. Sort chronologically and validate formats, duplicate dates, infinite values, and unexpected missing predictor values.
+6. Export the validated processed dataset as `capstone_capstone_plus_final.xlsx` for both research questions.
 
-The workflow was designed as a reproducible monthly pipeline:
+The 35 predictors include contemporaneous unemployment; unemployment lags at one, three, six, and twelve months; unemployment changes and momentum; inflation rates and lags; GDP growth and momentum; federal-funds-rate lags; real interest rate; consumer-sentiment lags and deterioration measures; and composite ratios or stress indexes.
 
-1. Ingest the six public macroeconomic series.
-2. Standardize dates, numeric fields, and series names.
-3. Convert quarterly GDP observations to monthly frequency.
-4. Merge all sources on a common monthly date index.
-5. Create future unemployment targets for 3, 6, and 12 months.
-6. Engineer lag, momentum, inflation, growth, monetary-policy, stress, and recession-risk features.
-7. Remove rows without valid future target labels and build horizon-specific modeling datasets.
-8. Use time-ordered train/test evaluation so future observations never leak into model training.
+## Methods and evaluation
 
-Engineered features include lagged federal-funds, GDP-growth and consumer-sentiment measures; unemployment and GDP momentum; inflation acceleration; growth-to-inflation and inflation-to-unemployment ratios; a monetary-tightening index; an economic-stress index; consumer-confidence deterioration; recession-risk flags; and labor-market shock indicators.
+The project uses a strictly **chronological** development and test design. Validation begins in January 1989, testing begins in January 1999, and an embargo equal to the forecast horizon prevents training labels from extending into validation or test time.
 
-During validation, future unemployment targets were rebuilt directly from the unemployment-rate series and rows with unavailable future labels were excluded. This corrected target leakage and ensured that reported results represent genuine out-of-sample forecasting.
+Six algorithms were compared at each horizon:
 
-## Modeling approach
+- Linear Regression
+- Ridge Regression
+- Random Forest
+- Extra Trees
+- Gradient Boosting
+- XGBoost
 
-The project compares three interpretable and tree-based approaches:
+The model with the lowest **validation RMSE** (validation MAE as a tiebreaker) was selected before the untouched test period was evaluated. Selected models were retained even when another algorithm later happened to have a lower test RMSE, avoiding post-hoc optimization on the test set.
 
-- **Linear Regression** as a transparent benchmark
-- **Random Forest** for nonlinear relationships and interactions
-- **Gradient Boosting** for sequentially improving prediction error
+Performance was evaluated with **MAE, RMSE, and R²** and compared against both a persistence baseline and an unemployment-only linear baseline.
 
-Models were evaluated separately at **3-, 6-, and 12-month horizons** using a time-based split. Performance was measured with **MAE, RMSE, and R²**, and results were compared against an unemployment-only baseline.
+## Forecasting results
 
-## Findings
+| Horizon | Selected model | Test MAE | Test RMSE | Test R² | RMSE vs. persistence | RMSE vs. unemployment-only |
+|---|---|---:|---:|---:|---:|---:|
+| **3 months** | **Ridge Regression** | **0.349** | **1.020** | **0.720** | **4.7% better** | **12.8% better** |
+| **6 months** | **Extra Trees** | **0.725** | **1.277** | **0.563** | **7.4% better** | **17.8% better** |
+| **12 months** | **Extra Trees** | **1.195** | **1.729** | **0.205** | **0.6% better** | **0.9% worse** |
 
-The strongest result is the **3-month forecast**, where **Gradient Boosting using the macroeconomic indicator feature set** achieved:
+The three-month result is the strongest operational finding. Ridge Regression was selected with validation RMSE **0.218** and achieved test MAE **0.349**, RMSE **1.020**, and R² **0.720**. The six-month Extra Trees model retained moderate predictive value. At twelve months, the full macroeconomic model provided almost no improvement over persistence and performed slightly worse than the unemployment-only baseline, so it should be treated as a broad scenario rather than a dependable one-year prediction.
 
-| Forecast horizon | Best model | MAE | RMSE | R² | Interpretation |
-|---|---|---:|---:|---:|---|
-| **3 months** | Gradient Boosting | **0.4445** | **1.2643** | **0.5232** | Strongest and most useful early-warning horizon |
-| **6 months** | Gradient Boosting | **0.9063** | **1.5824** | **0.2531** | Some predictive value, but materially weaker |
-| **12 months** | Random Forest | **2.1061** | **2.4716** | **-0.8644** | Not reliable for precise long-range forecasting |
+COVID-19 was the clearest failure case. Event-specific RMSE exceeded six percentage points at every horizon because the abrupt labor-market collapse was not encoded in the preceding macroeconomic trajectory. The models are more credible for persistent cyclical changes than for discontinuities created by sudden external shocks.
 
-For the 3-month model, the latest valid feature month is **September 2025**, allowing prediction through **December 2025**.
+## Historical indicator relationships
 
-The overall pattern is clear: macroeconomic indicators provide the most useful signal in the **near term**. Predictive performance weakens substantially as the forecast horizon increases, especially at 12 months.
+Research Question 2 was evaluated separately using Pearson and Spearman lead–lag correlations between unemployment and five external indicators.
 
-Important signals across the analysis include **consumer sentiment, inflation, interest rates, recession periods, and GDP growth patterns**. These variables are economically interpretable and help explain why the model behaves as an early-warning tool rather than a black-box forecast.
+| Indicator | 0M r | 3M r | 6M r | 12M r | Mean |r| | Strongest lead |
+|---|---:|---:|---:|---:|---:|---|
+| **Consumer sentiment** | -0.351 | -0.399 | -0.446 | **-0.496** | **0.423** | 12M (-0.496) |
+| Recession indicator | 0.159 | 0.298 | 0.378 | 0.429 | 0.316 | 12M (0.429) |
+| Inflation rate (YoY) | 0.076 | 0.137 | 0.195 | 0.304 | 0.178 | 12M (0.304) |
+| GDP growth (YoY) | -0.184 | -0.201 | -0.186 | -0.123 | 0.174 | 3M (-0.201) |
+| Federal funds rate | 0.052 | 0.104 | 0.166 | 0.287 | 0.152 | 12M (0.287) |
 
-![Capstone project visual.](projects/capstone/featured.svg){fig-alt="Forecasting U.S. unemployment using macroeconomic indicators" width="90%"}
+**Consumer sentiment showed the strongest overall historical relationship** with current and future unemployment. Its negative relationship strengthened from r = -0.351 in the same month to r = -0.496 at twelve months. Recession status ranked second. GDP growth showed a modest negative relationship, while inflation and the federal funds rate became more positively associated with unemployment at longer leads.
 
-## What I learned
+These relationships are **not causal or universally stable**. At a six-month lead, the consumer-sentiment correlation was strongly negative across the earlier historical periods but reversed to **+0.67 during 2020–2025**. The result should therefore be described as the strongest overall full-sample relationship, not a rule that holds in every economic regime.
 
-The project reinforced that strong forecasting performance depends as much on data engineering and validation discipline as on model choice. Correct date alignment, horizon-specific target construction, leakage prevention, missing-value handling, and time-aware evaluation materially affected the credibility of the final results.
+## Limitations
 
-It also showed that a model can still be useful even when it is not a good long-range forecaster. The 3-month horizon provides a practical early-warning signal, while the weak 12-month result is an important limitation rather than something to hide.
+- **Retrospective recession information:** NBER recession dates are assigned after turning points occur. `RecessionIndicator` and `RecessionRiskScore` limit real-time deployment claims.
+- **Composite-feature dependence:** `EconomicStressIndex` and several ratios include unemployment or closely related transformations, so their feature importance is not independent evidence from outside the target series.
+- **Structural breaks:** COVID-19 produced errors far outside normal historical behavior; prior relationships cannot anticipate shocks absent from predictor history.
+- **National aggregation:** U.S. averages conceal state, industry, occupation, age, race, education, and other subgroup differences.
+- **Revisions and data vintage:** The analysis uses revised historical values, and quarterly GDP is carried across three months. A true real-time evaluation would use release-aligned historical vintages.
+- **Single chronological split:** One long test period is interpretable but does not show how model rankings change across repeated rolling-origin evaluations.
+- **No formal prediction intervals:** Point forecasts do not communicate widening uncertainty at six and twelve months.
+- **Association, not causation:** Correlation and lead–lag coefficients describe historical co-movement, not causal effects, and can change across regimes.
+- **Time-series dependence:** Monthly observations are serially correlated, so conventional correlation p-values may appear more precise than they are.
 
-## Limitations and future work
+## Future work
 
-The current analysis uses six national U.S. indicators and data through 2025. It does not incorporate state-level labor-market variation, industry-specific employment conditions, demographic differences, or alternative high-frequency indicators.
+Future versions should build a strictly real-time feature set without retrospective recession labels; use contemporaneously available indicators such as claims, payroll growth, vacancies, and real-time recession proxies; implement rolling-origin cross-validation; build vintage-aware data using ALFRED or release archives; add prediction intervals; compare national results with state- and industry-level forecasts; test dedicated time-series and sequence models while retaining simple baselines; and estimate rolling or distributed-lag relationships for consumer sentiment and the other indicators.
 
-Future work could add state and industry labor data, evaluate additional leading indicators, test alternative forecast horizons, and compare advanced time-series or deep-learning approaches while preserving strict time-based validation.
+## Conclusion
 
-## Dig deeper
+Public macroeconomic data support **useful three-month forecasting and moderately informative six-month forecasting**, but the evidence does not support a strong claim of reliable twelve-month prediction. Ridge Regression is the primary three-month forecasting result, Extra Trees is the selected six-month planning model, and the twelve-month result is exploratory.
 
-- 📦 **Code, data pipeline, and modeling:** [DATA510-Session-2 on GitHub](https://github.com/manishkallu01-wq/DATA510-Session-2)
+For the historical-correlation question, consumer sentiment is the strongest overall external relationship with future unemployment, while recession status ranks second. Because these relationships shift across historical periods, they should be interpreted as regime-dependent historical associations rather than causal or universally stable effects.
+
+## Project materials
+
+- 📄 **Project Report:** <a href="assets/Project-Report.pdf" download="Project Report.pdf">Download the full 16-page report</a>
+- 📦 **Code, model outputs, and reproducibility materials:** [DATA510-Session-2](https://github.com/manishkallu01-wq/DATA510-Session-2)
 - 📊 **Detailed project page:** [Forecasting and Explaining U.S. Unemployment](projects/capstone/index.qmd)
 - 📄 **Resume:** [View my resume](resume.qmd)
