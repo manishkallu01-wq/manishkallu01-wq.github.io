@@ -95,3 +95,5 @@ engineering, time-based model validation, and comparison of Linear Regression,
 Random Forest, and Gradient Boosting models.
 
 [View the full Capstone project](capstone.qmd)
+
+<!-- Rebuild trigger: updated resume asset on 2026-08-10 -->
