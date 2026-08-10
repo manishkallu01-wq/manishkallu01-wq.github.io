@@ -3,13 +3,19 @@ title: "Resume"
 toc: true
 ---
 
+::: {.page-hero .hero-resume}
+### Data engineering experience across cloud, pipelines, and large-scale analytics
+
+More than five years of experience building scalable data platforms, batch and streaming pipelines, and analytics-ready systems across AWS and Azure.
+
 [📄 Download Resume PDF](assets/Resume.pdf){.btn .btn-primary role="button"}
+:::
 
 <iframe
   src="assets/Resume.pdf"
   width="100%"
   height="800px"
-  style="border: 1px solid #ddd; margin-top: 1rem;">
+  style="border: 1px solid #ddd; margin-top: 1rem; border-radius: 12px; background: white;">
 </iframe>
 
 ## Professional Summary
