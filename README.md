@@ -1,112 +1,58 @@
-# Data Science Portfolio Template (Quarto)
+# Manish Kallu — Data Science Portfolio
 
-A ready-to-ship [Quarto](https://quarto.org) portfolio site for **Willamette
-University M.S. Data Science** students. It ships a home page with a round
-headshot, a featured **Capstone** page, an **Other Projects** listing, a
-**Resume** page, and an **About** page — and it deploys itself with **GitHub
-Actions**, so you never commit build output.
+Public portfolio for **Manish R. Kallu**, M.S. Data Science, Willamette University.
 
-> The sample identity is **Blitz Bearcat**. Every page is
-> full of `[bracketed placeholders]` — sweep them all and nothing of Blitz's
-> should survive.
+## Live portfolio
 
-## Quick start (about 20 minutes to a live site)
+**https://manishkallu01-wq.github.io/**
 
-### 1. Make your own repo from this template
+Featured capstone: **Forecasting and Explaining U.S. Unemployment Through Macroeconomic Indicators**  
+Capstone page: **https://manishkallu01-wq.github.io/capstone.html**
 
-Click **Use this template → Create a new repository**.
+## Capstone summary
 
-**Name it exactly `your_github_username.github.io`** (your real username). That
-special name publishes your site at the clean root URL
-`https://your_github_username.github.io/` — no `/portfolio` suffix. Keep it
-**public**.
+The project evaluates whether publicly available U.S. macroeconomic indicators can forecast unemployment 3, 6, and 12 months ahead and separately examines which external indicators show the strongest historical lead–lag relationships with unemployment. The submitted analysis uses monthly data from **April 1956 through December 2025**, a final dataset of **837 rows × 40 columns**, **35 numeric predictors**, six forecasting algorithms, chronological validation, and persistence/unemployment-only baselines.
 
-### 2. Turn on GitHub Actions deployment (one-time)
+Selected test results:
 
-In your new repo: **Settings → Pages → Build and deployment → Source →
-“GitHub Actions.”**
+| Horizon | Selected model | MAE | RMSE | R² |
+|---|---|---:|---:|---:|
+| 3 months | Ridge Regression | 0.349 | 1.020 | 0.720 |
+| 6 months | Extra Trees | 0.725 | 1.277 | 0.563 |
+| 12 months | Extra Trees | 1.195 | 1.729 | 0.205 |
 
-That's the whole deployment setup. There is no `gh-pages` branch to manage and
-no `_site`/`docs` folder to commit — every push to `main` triggers the workflow
-in [`.github/workflows/publish.yml`](.github/workflows/publish.yml), which
-renders the site and deploys it.
+Consumer sentiment showed the strongest overall external historical relationship with future unemployment, reaching Pearson **r = -0.496 at 12 months**, while the analysis also shows that these relationships can change across economic regimes.
 
-### 3. Clone and preview locally
+## Final artifacts
+
+- **Portfolio / project landing page:** https://manishkallu01-wq.github.io/capstone.html
+- **Project report:** https://manishkallu01-wq.github.io/assets/Project%20Report.pdf
+- **Final poster:** https://github.com/manishkallu01-wq/DATA510-Session-2/blob/main/deliverables/M5-final/M5%20poster%20Final.pdf
+- **Project repository:** https://github.com/manishkallu01-wq/DATA510-Session-2
+
+## Portfolio structure
+
+- `index.qmd` — professional landing page
+- `capstone.qmd` — featured capstone landing page, results, reproducibility, ethics, attribution, and artifacts
+- `projects/capstone/index.qmd` — detailed capstone summary
+- `projects.qmd` — projects listing
+- `resume.qmd` — resume and downloadable PDF
+- `about.qmd` — professional background and contact information
+- `assets/Project Report.pdf` — capstone report
+- `assets/Resume.pdf` — current resume
+
+## Publishing
+
+The site is built with **Quarto** and deployed through GitHub Pages/GitHub Actions. Pushes to `main` trigger publication.
+
+To preview the portfolio locally:
 
 ```bash
-git clone https://github.com/your_github_username/your_github_username.github.io.git
-cd your_github_username.github.io
+git clone https://github.com/manishkallu01-wq/manishkallu01-wq.github.io.git
+cd manishkallu01-wq.github.io
 quarto preview
 ```
 
-Leave `quarto preview` running: edit a file, save, watch it reload.
+## Responsible use and attribution
 
-### 4. Make it yours
-
-| File | What to change |
-|------|----------------|
-| `_quarto.yml` | Site title, navbar, footer, GitHub/LinkedIn links, `site-url` |
-| `index.qmd` | Your name, one-liner, links (round headshot lives here) |
-| `images/profile.png` | Replace with your own headshot (square crops best) |
-| `capstone.qmd` | Your featured capstone — the most important page |
-| `projects/` | One folder per "other" project; delete `example-analysis/` |
-| `resume.qmd` + `assets/resume.pdf` | Your resume summary + downloadable PDF |
-| `about.qmd` | The longer story in your own voice |
-| `styles.scss` | One accent color, one font |
-
-### 5. Publish
-
-```bash
-git add .
-git commit -m "Make the portfolio mine"
-git push
-```
-
-Watch the **Actions** tab. When the run goes green, your site is live at
-`https://your_github_username.github.io/`. From now on, **push is publish** —
-that's the whole update cycle.
-
-## Running code in your pages (freeze)
-
-This template is configured with `execute: freeze: auto` in `_quarto.yml`, and
-GitHub Actions installs **only Quarto — not R or Python.** That keeps builds
-fast and reliable for a whole cohort.
-
-If you add R or Python chunks (for example in your capstone), render **locally**
-so Quarto stores the results in `_freeze/`, then commit that folder:
-
-```bash
-quarto render
-git add _freeze/
-git commit -m "Freeze capstone output"
-git push
-```
-
-CI then reuses the frozen output instead of running your code — so it never
-needs your data or your packages. If a page must never execute in CI, you can
-also set `eval: false` on those chunks.
-
-## What's in the box
-
-```
-.
-├── _quarto.yml                  # site config, navbar, theme, freeze
-├── index.qmd                    # Home — round headshot + one-liner
-├── capstone.qmd                 # Featured capstone project
-├── projects.qmd                 # Listing page for other projects
-├── projects/
-│   ├── capstone/featured.png    # capstone hero image
-│   └── example-analysis/        # sample "other project" (delete me)
-├── resume.qmd                   # Resume page (+ assets/resume.pdf)
-├── about.qmd                    # About page
-├── images/profile.png           # headshot (Blitz sample)
-├── styles.scss                  # theme tweaks
-└── .github/workflows/publish.yml  # GitHub Actions deploy
-```
-
-## Requirements
-
-- [Quarto](https://quarto.org/docs/get-started/) installed locally for preview.
-- A GitHub account. Everything here is free on public repos.
-
-Built for **DATA 510: Data Science Capstone**, Willamette University.
+The capstone uses aggregate public economic data from the U.S. Bureau of Labor Statistics, Federal Reserve/FRED, U.S. Bureau of Economic Analysis, University of Michigan Surveys of Consumers, and National Bureau of Economic Research. Third-party data remain subject to their original providers' terms and attribution requirements. The analysis is intended for research, scenario planning, and comparative model evaluation; it should not be used as the sole basis for individual employment decisions, benefit allocation, or recession declarations.
