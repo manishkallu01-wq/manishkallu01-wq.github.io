@@ -7,9 +7,13 @@ about:
   image-width: 12em
 ---
 
+::: {.page-hero .hero-about}
 ## Hi, I'm Manish Kallu 👋
 
-I'm a Data Engineer and Master's student in Data Science at Willamette University with over five years of experience designing scalable data platforms and cloud-native data pipelines. My passion lies in turning raw data into reliable, high-quality datasets that power analytics, machine learning, and business decision-making.
+I'm a Data Engineer and Master's student in Data Science at Willamette University with over five years of experience designing scalable data platforms and cloud-native data pipelines.
+:::
+
+My passion lies in turning raw data into reliable, high-quality datasets that power analytics, machine learning, and business decision-making.
 
 Throughout my career, I've worked across AWS and Azure ecosystems, building ETL pipelines, data warehouses, streaming applications, and modern Lakehouse architectures using technologies such as Apache Spark, Databricks, Snowflake, Airflow, and dbt. I enjoy solving complex engineering problems, optimizing large-scale data pipelines, and building systems that are reliable, maintainable, and production-ready.
 
