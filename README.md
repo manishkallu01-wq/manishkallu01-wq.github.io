@@ -27,7 +27,7 @@ Consumer sentiment showed the strongest overall external historical relationship
 
 - **Portfolio / project landing page:** https://manishkallu01-wq.github.io/capstone.html
 - **Project report:** https://manishkallu01-wq.github.io/assets/Project%20Report.pdf
-- **Final poster:** https://github.com/manishkallu01-wq/DATA510-Session-2/blob/main/deliverables/M5-final/M5%20Poster_Final.pdf
+- **Final poster:** https://manishkallu01-wq.github.io/assets/M5%20poster%20Final.pdf
 - **Project repository:** https://github.com/manishkallu01-wq/DATA510-Session-2
 
 ## Portfolio structure
@@ -39,6 +39,7 @@ Consumer sentiment showed the strongest overall external historical relationship
 - `resume.qmd` — resume and downloadable PDF
 - `about.qmd` — professional background and contact information
 - `assets/Project Report.pdf` — capstone report
+- `assets/M5 poster Final.pdf` — final capstone poster
 - `assets/Resume.pdf` — current resume
 
 ## Publishing
