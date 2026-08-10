@@ -2,6 +2,12 @@
 title: "Projects"
 ---
 
+::: {.page-hero .hero-projects}
+### Applied data engineering + machine learning
+
+This portfolio highlights work that combines reproducible data pipelines, statistical analysis, machine learning, and clear communication for technical and non-technical audiences.
+:::
+
 ## Featured Project
 
 ### [Forecasting and Explaining U.S. Unemployment](capstone.qmd)
