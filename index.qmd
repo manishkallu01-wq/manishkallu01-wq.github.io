@@ -15,7 +15,7 @@ about:
 
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/manish-k-583b61421/
+      href: https://www.linkedin.com/in/manish-kallu-583b61421/
 
     - icon: envelope
       text: Email
@@ -31,8 +31,7 @@ scalable, and production-ready data platforms across AWS and Azure.
 
 I am currently completing my M.S. in Data Science at
 **Willamette University**. My capstone project
-[forecasts future U.S. unemployment](capstone.qmd) using publicly available
-macroeconomic indicators and machine learning.
+[forecasts future U.S. unemployment](capstone.qmd) at three-, six-, and twelve-month horizons using public macroeconomic data, chronological model evaluation, and historical lead–lag analysis.
 
 My interests include data engineering, cloud-native architectures, distributed
 data processing, machine learning, and transforming complex data into useful
