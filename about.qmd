@@ -13,7 +13,7 @@ I'm a Data Engineer and Master's student in Data Science at Willamette Universit
 
 Throughout my career, I've worked across AWS and Azure ecosystems, building ETL pipelines, data warehouses, streaming applications, and modern Lakehouse architectures using technologies such as Apache Spark, Databricks, Snowflake, Airflow, and dbt. I enjoy solving complex engineering problems, optimizing large-scale data pipelines, and building systems that are reliable, maintainable, and production-ready.
 
-At Willamette University, my focus is on data engineering, machine learning, and cloud computing. My [capstone](capstone.qmd) explores forecasting U.S. unemployment using macroeconomic indicators through predictive modeling and feature engineering, combining data engineering with machine learning to generate actionable insights.
+At Willamette University, my focus is on data engineering, machine learning, and cloud computing. My [capstone](capstone.qmd) evaluates U.S. unemployment forecasting at three-, six-, and twelve-month horizons using six public macroeconomic series, six forecasting algorithms, chronological validation, and a separate historical lead–lag correlation analysis.
 
 ### Beyond the terminal
 
@@ -26,5 +26,5 @@ At Willamette University, my focus is on data engineering, machine learning, and
 I'm always happy to connect about data engineering, cloud technologies, machine learning, open-source projects, or new career opportunities.
 
 - ✉️ [manishhk2808@gmail.com](mailto:manishhk2808@gmail.com)
-- 💼 [LinkedIn](https://linkedin.com/in/manish-k-583b61421)
+- 💼 [LinkedIn](https://www.linkedin.com/in/manish-kallu-583b61421/)
 - 💻 [GitHub](https://github.com/manishkallu01-wq)
