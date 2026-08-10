@@ -12,5 +12,5 @@ The selected **3-month Ridge Regression** model achieved **MAE 0.349, RMSE 1.020
 
 [View Project](capstone.qmd){.btn .btn-primary role="button"}
 <a href="assets/Project%20Report.pdf" class="btn btn-outline-primary" download="Project Report.pdf">Download Project Report</a>
-[View Final Poster](https://github.com/manishkallu01-wq/DATA510-Session-2/blob/main/deliverables/M5-final/M5%20poster%20Final.pdf){.btn .btn-outline-primary role="button"}
+[View Final Poster](https://github.com/manishkallu01-wq/DATA510-Session-2/blob/main/deliverables/M5-final/M5%20Poster_Final.pdf){.btn .btn-outline-primary role="button"}
 [GitHub Repository](https://github.com/manishkallu01-wq/DATA510-Session-2){.btn .btn-outline-primary role="button"}
