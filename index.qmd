@@ -1,6 +1,6 @@
 ---
 title: "Manish Kallu"
-subtitle: "Data Engineer · M.S. Data Science Candidate"
+subtitle: "Data Engineer · M.S. Data Science Graduate"
 image: images/image.png
 
 about:
