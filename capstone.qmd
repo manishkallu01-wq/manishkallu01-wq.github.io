@@ -95,17 +95,9 @@ COVID-19 was the clearest failure case. Event-specific RMSE exceeded six percent
 
 ## Reproducibility
 
-The public repository contains the processed analysis input, M5 result files, figures, and final artifacts. A peer can prepare the Python environment with:
+Use `capstone_plus_final.xlsx` as the common processed input for both research questions. The complete Python scripts—including the separate RQ2 correlation analysis—along with model outputs and figures are available in [`deliverables/M5-final`](https://github.com/manishkallu01-wq/DATA510-Session-2/tree/main/deliverables/M5-final).
 
-```bash
-git clone https://github.com/manishkallu01-wq/DATA510-Session-2.git
-cd DATA510-Session-2
-python3 -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install pandas numpy scikit-learn xgboost matplotlib scipy openpyxl joblib
-```
-
-Use `capstone_plus_final.xlsx` as the common processed analysis input and the submitted M5 analysis materials in the repository to reproduce the model comparisons and correlation outputs. Compare regenerated outputs against the final report and the files under `deliverables/M5-final/`. Results can change if data vintages, date ranges, feature definitions, package versions, random seeds, hyperparameters, or model configurations are changed; those changes should be treated as a new analysis version.
+Results may change if the input data, feature definitions, date ranges, random seeds, hyperparameters, package versions, or model configurations are modified. Document such changes as a new analysis version.
 
 ## Ethics, data notice, licensing, and attribution
 
