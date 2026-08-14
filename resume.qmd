@@ -29,7 +29,7 @@ workloads, and supporting analytics and machine-learning applications.
 
 **Master of Science in Data Science**  
 Willamette University, Salem, Oregon  
-Expected August 2026 · GPA: 3.85/4.0
+August 2026 · GPA: 3.85/4.0
 
 Relevant coursework includes Data Engineering, Machine Learning, Big Data
 Analytics, Cloud Computing, Database Management Systems, Deep Learning,

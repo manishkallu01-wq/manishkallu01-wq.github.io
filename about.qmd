@@ -10,7 +10,7 @@ about:
 ::: {.page-hero .hero-about}
 ## Hi, I'm Manish Kallu 👋
 
-I'm a Data Engineer and Master's student in Data Science at Willamette University with over five years of experience designing scalable data platforms and cloud-native data pipelines.
+I'm a Data Engineer and M.S. in Data Science graduate of Willamette University with over five years of experience designing scalable data platforms and cloud-native data pipelines.
 :::
 
 My passion lies in turning raw data into reliable, high-quality datasets that power analytics, machine learning, and business decision-making.

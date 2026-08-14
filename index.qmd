@@ -32,7 +32,7 @@ about:
 I am a Data Engineer with more than five years of experience building reliable,
 scalable, and production-ready data platforms across AWS and Azure.
 
-I am currently completing my M.S. in Data Science at **Willamette University**. My capstone project [forecasts future U.S. unemployment](capstone.qmd) at three-, six-, and twelve-month horizons using public macroeconomic data, chronological model evaluation, and historical lead–lag analysis.
+I am an M.S. in Data Science graduate of **Willamette University**. My capstone project [forecasts future U.S. unemployment](capstone.qmd) at three-, six-, and twelve-month horizons using public macroeconomic data, chronological model evaluation, and historical lead–lag analysis.
 
 **Currently seeking Data Engineer opportunities.** [Get in touch](about.qmd) or view my [resume](resume.qmd).
 :::

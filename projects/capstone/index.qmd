@@ -6,7 +6,7 @@ toc: true
 
 ## Project Summary
 
-This capstone evaluates whether publicly available macroeconomic indicators can forecast the U.S. unemployment rate **three, six, and twelve months ahead** and which original macroeconomic indicators show the strongest historical relationship with unemployment. The submitted analysis uses monthly data from **April 1956 through December 2025**, **35 engineered predictors**, six forecasting algorithms, chronological validation, and separate lead–lag correlation analysis.
+This capstone evaluates whether publicly available macroeconomic indicators can forecast the U.S. unemployment rate **three, six, and twelve months ahead** and which external macroeconomic indicators show the strongest historical relationship with unemployment. The submitted analysis uses monthly data from **April 1956 through December 2025**, **35 engineered predictors**, six forecasting algorithms, chronological validation, and separate lead–lag correlation analysis.
 
 <a href="../../assets/Project%20Report.pdf" class="btn btn-primary" download="Project Report.pdf">📄 Download Project Report</a>
 [View the GitHub Repository](https://github.com/manishkallu01-wq/DATA510-Session-2){.btn .btn-outline-primary role="button"}
@@ -67,6 +67,6 @@ Public macroeconomic data support useful **three-month** unemployment forecasts 
 
 ## Reproducibility
 
-The submitted workflow uses Python 3 with pandas, NumPy, scikit-learn, XGBoost, Matplotlib, SciPy, openpyxl, and Joblib. Model comparisons, baselines, predictions, feature importance, lead–lag correlations, historical-period stability results, figures, and scripts are available in the project repository.
+The submitted workflow uses Python 3 with pandas, NumPy, scikit-learn, XGBoost, Matplotlib, SciPy, openpyxl, and Joblib. Use [`capstone_plus_final.xlsx`](https://github.com/manishkallu01-wq/DATA510-Session-2/blob/main/data/processed/capstone_plus_final.xlsx) as the common processed input for both research questions. Model comparisons, baselines, predictions, feature importance, lead–lag correlations, historical-period stability results, figures, and all Python scripts—including the separate RQ2 correlation analysis—are available in [`deliverables/M5-final`](https://github.com/manishkallu01-wq/DATA510-Session-2/tree/main/deliverables/M5-final).
 
 [Open DATA510 Capstone Repository](https://github.com/manishkallu01-wq/DATA510-Session-2)
