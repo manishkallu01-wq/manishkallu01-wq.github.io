@@ -23,6 +23,8 @@ Selected test results:
 
 Consumer sentiment showed the strongest overall external historical relationship with future unemployment, reaching Pearson **r = -0.496 at 12 months**, while the analysis also shows that these relationships can change across economic regimes.
 
+Models were selected using the lowest validation RMSE, with validation MAE as a tiebreaker, before a single evaluation on the untouched chronological test period. Reproducibility uses `capstone_plus_final.xlsx` as the common processed input; all Python scripts, including the separate RQ2 correlation analysis, are available under `deliverables/M5-final` in the project repository.
+
 ## Final artifacts
 
 - **Portfolio / project landing page:** https://manishkallu01-wq.github.io/capstone.html

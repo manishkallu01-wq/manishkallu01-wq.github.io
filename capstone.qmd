@@ -55,7 +55,7 @@ The submitted analysis uses U.S. monthly data from **April 1956 through December
 3. Merge all six indicators using the monthly date key.
 4. Create lagged, rate-of-change, momentum, ratio, stress, and future-unemployment target variables.
 5. Sort chronologically and validate formats, duplicate dates, infinite values, and unexpected missing predictor values.
-6. Export the validated processed dataset as `capstone_capstone_plus_final.xlsx` for both research questions.
+6. Export the validated processed dataset as `capstone_plus_final.xlsx` for both research questions.
 
 The 35 predictors include contemporaneous unemployment; unemployment lags at one, three, six, and twelve months; unemployment changes and momentum; inflation rates and lags; GDP growth and momentum; federal-funds-rate lags; real interest rate; consumer-sentiment lags and deterioration measures; and composite ratios or stress indexes.
 
@@ -105,7 +105,7 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install pandas numpy scikit-learn xgboost matplotlib scipy openpyxl joblib
 ```
 
-Use `capstone_capstone_plus_final.xlsx` as the common processed analysis input and the submitted M5 analysis materials in the repository to reproduce the model comparisons and correlation outputs. Compare regenerated outputs against the final report and the files under `deliverables/M5-final/`. Results can change if data vintages, date ranges, feature definitions, package versions, random seeds, hyperparameters, or model configurations are changed; those changes should be treated as a new analysis version.
+Use `capstone_plus_final.xlsx` as the common processed analysis input and the submitted M5 analysis materials in the repository to reproduce the model comparisons and correlation outputs. Compare regenerated outputs against the final report and the files under `deliverables/M5-final/`. Results can change if data vintages, date ranges, feature definitions, package versions, random seeds, hyperparameters, or model configurations are changed; those changes should be treated as a new analysis version.
 
 ## Ethics, data notice, licensing, and attribution
 
