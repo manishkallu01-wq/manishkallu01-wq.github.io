@@ -103,7 +103,7 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install pandas numpy scikit-learn xgboost matplotlib scipy openpyxl joblib
 ```
 
-Use `capstone_plus_final.xlsx` as the common processed input for both research questions. The complete Python scripts—including the separate RQ2 correlation analysis—along with model outputs and figures are available in [`deliverables/M5-final`](https://github.com/manishkallu01-wq/DATA510-Session-2/tree/main/deliverables/M5-final).
+Use [`capstone_plus_final.xlsx`](https://github.com/manishkallu01-wq/DATA510-Session-2/blob/main/data/processed/capstone_plus_final.xlsx) as the common processed input for both research questions. The complete Python scripts—including the separate RQ2 correlation analysis—along with model outputs and figures are available in [`deliverables/M5-final`](https://github.com/manishkallu01-wq/DATA510-Session-2/tree/main/deliverables/M5-final).
 
 Results may change if the input data, feature definitions, date ranges, random seeds, hyperparameters, package versions, or model configurations are modified. Document such changes as a new analysis version.
 
